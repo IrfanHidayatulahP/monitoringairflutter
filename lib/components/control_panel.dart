@@ -20,17 +20,21 @@ class ControlPanel extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _buildControlButton(
-            'Set Batas Aman',
-            Icons.security,
-            onSetSafeLimit,
+          Expanded(
+            child: _buildControlButton(
+              'Set Batas Aman',
+              Icons.security,
+              onSetSafeLimit,
+            ),
           ),
-          _buildControlButton(
-            'Reset',
-            Icons.refresh,
-            onReset,
+          const SizedBox(width: 16),
+          Expanded(
+            child: _buildControlButton(
+              'Reset',
+              Icons.refresh,
+              onReset,
+            ),
           ),
         ],
       ),

@@ -45,18 +45,43 @@ class _SafeLimitModalState extends State<SafeLimitModal> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Slider(
-              value: tempLimit,
-              min: 0,
-              max: 100,
-              divisions: 4,
-              label: '${tempLimit.toStringAsFixed(0)}%',
-              activeColor: AppColors.biruPolarius,
-              onChanged: (value) {
-                setState(() {
-                  tempLimit = value;
-                });
-              },
+            // Slider(
+            //   value: tempLimit,
+            //   min: 0,
+            //   max: 100,
+            //   divisions: 4,
+            //   label: '${tempLimit.toStringAsFixed(0)}%',
+            //   activeColor: AppColors.biruPolarius,
+            //   onChanged: (value) {
+            //     setState(() {
+            //       tempLimit = value;
+            //     });
+            //   },
+            // ),
+            SliderTheme(
+              data: SliderTheme.of(context).copyWith(
+                activeTrackColor: AppColors.biruPolarius,
+                inactiveTrackColor: AppColors.biruPolarius.withOpacity(0.3),
+                thumbColor: AppColors.biruPolarius,
+                overlayColor: AppColors.biruPolarius.withOpacity(0.2),
+                valueIndicatorColor: AppColors.biruTua,
+                valueIndicatorTextStyle: const TextStyle(
+                  color: Colors.white, // atau ganti sesuai kebutuhan
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              child: Slider(
+                value: tempLimit,
+                min: 0,
+                max: 100,
+                divisions: 4,
+                label: '${tempLimit.toStringAsFixed(0)}%',
+                onChanged: (value) {
+                  setState(() {
+                    tempLimit = value;
+                  });
+                },
+              ),
             ),
             Row(
               children: [

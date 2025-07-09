@@ -36,7 +36,7 @@ class _DashboardPageState extends State<DashboardPage>
   late SensorService sensorService;
 
   // Base URL untuk API
-  final String _baseUrl = "https://ea8f3a2a753f.ngrok-free.app";
+  final String _baseUrl = "https://e83eca43a336.ngrok-free.app";
 
   @override
   void initState() {
